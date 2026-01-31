@@ -19,6 +19,11 @@ INFO_BREAK = "\033[1;31m[Info]: User has break the operation with Ctrl+C, ask us
 ERR_MUL = "\033[1;31m[Err]: more than one bash block is generated in one conversation.\033[0m"
 HEADER = Path("header.txt").read_text(encoding="utf-8")
 
+def parse_response(content: str) -> tuple:
+    cmds = re.findall(r"```bash\n(.*?)\n```", content, re.DOTALL)
+    msg = re.sub(r"```bash\s*\n.*?\n```", "", content, flags=re.DOTALL).strip()
+    return cmds, msg
+
 def get_response(client: OpenAI, messages: List[Dict[str, str]], content: str) -> Tuple[List[str], str]:
     messages.append({"role": "user", "content": content})
     print("\033[1;32m[Generating ...]\033[0m")
@@ -34,9 +39,10 @@ def get_response(client: OpenAI, messages: List[Dict[str, str]], content: str) -
         print(f"\033[1;31m[Agent]: The agent has failed to follow the rule, retrying.\033[0m")
     return cmds, msg
 
-def parse_response(content: str) -> tuple:
-    cmds = re.findall(r"```bash\n(.*?)\n```", content, re.DOTALL)
-    msg = re.sub(r"```bash\s*\n.*?\n```", "", content, flags=re.DOTALL).strip()
+def feedback_response(client: OpenAI, messages: List[Dict[str, str]], user_message: str) -> Tuple[List[str], str]:
+    cmds, msg = get_response(client,messages, user_message)
+    while len(cmds) > 1:
+        cmds, msg = get_response(client,messages, ERR_MUL)
     return cmds, msg
 
 def task_loop(client: OpenAI, messages: List[Dict[str, str]], result: CompletedProcess) -> None:
@@ -60,12 +66,6 @@ def task_loop(client: OpenAI, messages: List[Dict[str, str]], result: CompletedP
     except KeyboardInterrupt:
         print("\033[1;31m[Info]: User has quit the sub task.\033[0m")
         feedback_response(client, messages, INFO_BREAK)
-
-def feedback_response(client: OpenAI, messages: List[Dict[str, str]], user_message: str) -> Tuple[List[str], str]:
-    cmds, msg = get_response(client,messages, user_message)
-    while len(cmds) > 1:
-        cmds, msg = get_response(client,messages, ERR_MUL)
-    return cmds, msg
 
 def react_loop(client: OpenAI, messages: List[Dict[str, str]]) -> None:
     while True:

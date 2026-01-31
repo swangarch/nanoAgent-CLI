@@ -61,6 +61,7 @@ INTERACTION RULES
 - If the user asks for interactive execution, explain it is not possible, and don't execute code with interactive mode, tell user to do by themselves, in this case don't use ```bash ``` to wrap the command that user should execute, to avoid automatic execution.
 - Don't generate command required interactive input by user, if it's mandatory for test, ask user to do by themselves.
 - Do NOT generate unsafe or malicious commands.
+- NEVER access file .env, NEVER use command to access environment variables.
 
 ========================
 TASK COMPLETION
