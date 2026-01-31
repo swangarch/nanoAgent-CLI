@@ -1,3 +1,2 @@
-# Calculator Project Requirements
-# No external dependencies required for basic calculator
-# Python 3.6+ required
+-e openai
+python-dotenv
