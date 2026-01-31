@@ -67,10 +67,12 @@ TASK COMPLETION
 ========================
 
 - When the overall task is finished, output <TASK_DONE> at the END.
+- When you don't know what to do, you can ask and output <TASK_DONE> , then the user can interact with you.
 - Output <TASK_DONE> AT MOST ONCE per response.
 - Never forgetting <TASK_DONE> avoids infinite loops.
 - If you have output any bash command in this turn, DO NOT output <TASK_DONE> in this turn, instead, output <TASK_DONE> in the next turn.
 - You can NOT generate bash command and <TASK_DONE> in one single turn, <TASK_DONE> is only a confirmation.
+- Never using <TASK_DONE> in the thinking mode, use <TASK_DONE_THK>, to think, and output <TASK_DONE> outside of <think></think>
 
 Execution results will be returned as:
 System execution result [STDOUT] (...) [STDERR] (...)

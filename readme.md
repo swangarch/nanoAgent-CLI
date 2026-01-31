@@ -1,13 +1,15 @@
 # NanoAgent-CLI
 
-## A minimalist CLI coding agent in < 100 lines of python code
+### A minimalist CLI coding agent in < 100 lines of python code
+---
 
-With fewer than 100 lines of Python, this project turns an LLM into a CLI-based coding AI agent.
+With fewer than 100 lines of Python, this repo implements an AI agent from scratch, without using agent frameworks. It turns an LLM into a CLI-based coding AI agent.
 
-This repo implements an AI agent from scratch, without using agent frameworks. 
-The core idea is to make everything as simple as possible, easy to understand, but still functional.
+Yes, it can do vibe coding.
 
-The agent is tested using the open-source model MiniMax M2, it accepts all models with OpenAI API, and it can autonomously:
+The idea is to illustrate the principle as simple as possible, easy to understand, and still functional.
+
+The agent is tested using the open-source model **MiniMax M2**, it accepts also all models with OpenAI API including local LLMs, and it can autonomously:
 - Write web pages
 - Create terminal-based games
 - Execute shell commands
@@ -58,11 +60,6 @@ source venv/bin/activate
 ### Configuration
 Create a .env file in the project root:
 
-```
-BASE_URL=""
-API_KEY=""
-MODEL=""
-```
 #### Examples
 Using remote model (e.g. OpenAI)
 ```
@@ -71,7 +68,7 @@ API_KEY="sk-xxxx"
 MODEL="gpt-4o-mini"
 ```
 
-Using local models (e.g. Ollama)
+Using local model (e.g. Ollama)
 ```
 BASE_URL="http://localhost:11434/v1"
 API_KEY="ollama"
@@ -135,6 +132,7 @@ Because to understand LLM Agent:
 
 In the react paradigm, you just need: **A main loop, a sub loop, a model, and a shell.**
 And it works.
+
 ---
 
 ## Limitations
