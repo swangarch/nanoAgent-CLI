@@ -1,2 +1,3 @@
--e openai
+openai
+
 python-dotenv

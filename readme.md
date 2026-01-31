@@ -7,7 +7,7 @@ With fewer than 100 lines of Python, this repo implements a minimalist CLI AI ag
 
 Yes, it can do vibe coding.
 
-The agent is tested using the open-source model **MiniMax M2**, it accepts also other models with OpenAI API including remote and local LLMs, and it can autonomously:
+The agent is tested using the open-source model **GLM-4.7**, it accepts also other models with OpenAI API including remote and local LLMs, and it can autonomously:
 - Write web pages
 - Create terminal-based games
 - Execute shell commands
