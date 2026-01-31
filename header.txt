@@ -8,6 +8,9 @@
 │ ██║ ╚████║██║  ██║██║ ╚████║╚██████╔╝██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║    │
 │ ╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝    │
 │                                                                                   │
-│ NanoAgent CLI · An CLI agent in < 100 lines of code                               │
+│ NanoAgent CLI · A CLI coding agent in < 100 lines of code                         │
 │ https://github.com/swangarch/nanoAgent-CLI                                        │
+│                                                                                   │
+│ Ctrl+C to break sub task, Ctrl+C again or Ctrl+D to quit                          │
 └───────────────────────────────────────────────────────────────────────────────────┘
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Photography Portfolio</h1>
+            <p class="subtitle">Capturing moments through a refined lens</p>
+        </header>
+
+        <nav class="nav">
+            <button class="nav-btn active" data-filter="all">All</button>
+            <button class="nav-btn" data-filter="portraits">Portraits</button>
+            <button class="nav-btn" data-filter="landscapes">Landscapes</button>
+            <button class="nav-btn" data-filter="urban">Urban</button>
+        </nav>
+
+        <main class="gallery">
+            <div class="photo-card" data-category="portraits">
+                <div class="photo-placeholder portrait-1">
+                    <div class="photo-overlay">
+                        <h3>Portrait Study</h3>
+                        <p>Natural light portrait</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="landscapes">
+                <div class="photo-placeholder landscape-1">
+                    <div class="photo-overlay">
+                        <h3>Mountain Vista</h3>
+                        <p>Golden hour landscape</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="urban">
+                <div class="photo-placeholder urban-1">
+                    <div class="photo-overlay">
+                        <h3>City Lights</h3>
+                        <p>Urban night photography</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="portraits">
+                <div class="photo-placeholder portrait-2">
+                    <div class="photo-overlay">
+                        <h3>Studio Portrait</h3>
+                        <p>Minimalist portrait session</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="landscapes">
+                <div class="photo-placeholder landscape-2">
+                    <div class="photo-overlay">
+                        <h3>Ocean Breeze</h3>
+                        <p>Coastal serenity</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="urban">
+                <div class="photo-placeholder urban-2">
+                    <div class="photo-overlay">
+                        <h3>Street Geometry</h3>
+                        <p>Architectural details</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="portraits">
+                <div class="photo-placeholder portrait-3">
+                    <div class="photo-overlay">
+                        <h3>Candid Moment</h3>
+                        <p>Life behind the scenes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="landscapes">
+                <div class="photo-placeholder landscape-3">
+                    <div class="photo-overlay">
+                        <h3>Forest Path</h3>
+                        <p>Nature's cathedral</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card" data-category="urban">
+                <div class="photo-placeholder urban-3">
+                    <div class="photo-overlay">
+                        <h3>Urban Reflection</h3>
+                        <p>Glass and steel</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Photography Portfolio. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
