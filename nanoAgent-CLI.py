@@ -80,7 +80,7 @@ def react_loop(client: OpenAI, messages: List[Dict[str, str]]) -> None:
             else:
                 print("\033[1;31m[Info]: User has canceled the task.\033[0m")
                 feedback_response(client, messages, INFO_CANCEL)
-                break
+            break
 
 def main():
     try:
