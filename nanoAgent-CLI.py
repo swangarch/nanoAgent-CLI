@@ -19,7 +19,7 @@ INFO_BREAK = "\033[1;31m[Info]: User has break the operation with Ctrl+C, ask us
 ERR_MUL = "\033[1;31m[Err]: more than one bash block is generated in one conversation.\033[0m"
 HEADER = Path("header.txt").read_text(encoding="utf-8")
 
-def parse_response(content: str) -> tuple:
+def parse_response(content: str) -> Tuple[List[str], str]:
     cmds = re.findall(r"```bash\n(.*?)\n```", content, re.DOTALL)
     msg = re.sub(r"```bash\s*\n.*?\n```", "", content, flags=re.DOTALL).strip()
     return cmds, msg
